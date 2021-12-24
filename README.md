@@ -3,7 +3,7 @@
 
 -Caveats : If two process:port are blocked using cgroup, process2 port might be affected with process1 port.
 
-#Demo
+## Demo
 
 
 The demo shows, how process(port) specific blocking can be done with eBPF. Here we take an example of process(PID: 2836) to block all its communications on port 8000 but allowing other process to communicate with port 8000; thereby only blocking comms(specific to port) of process(2836)
@@ -42,4 +42,7 @@ Trigger block.sh
 ## Notes
 SOCK_OPS -> Triggers when TCP events such as connection establishment, tcp retransmit, etc
 Program referenced from bcc/examples/sockmap.py
+
+## TO-DO
++On interrupt, move process back to unified cgroup (/sys/fs/cgroup/unified)
 

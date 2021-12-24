@@ -1,2 +1,2 @@
 #!/bin/bash
-mkdir /sys/fs/cgroup/block
+sudo mkdir /sys/fs/cgroup/block
